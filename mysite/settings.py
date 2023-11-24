@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "accounts",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,7 +42,6 @@ INSTALLED_APPS = [
     # "music",
     "book",
     "gallery",
-    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -140,3 +140,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
